@@ -1,6 +1,6 @@
 // Created by Leopold Lemmermann on 28.04.23.
 
-@testable import LeosMisc
+@testable import Extensions
 import XCTest
 
 @available(iOS 16, macOS 13, *)

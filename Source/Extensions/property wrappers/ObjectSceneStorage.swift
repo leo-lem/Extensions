@@ -15,7 +15,8 @@ public struct ObjectSceneStorage<T: Codable>: DynamicProperty {
   }
 
   @SceneStorage var data: Data
-  private let (encoder, decoder) = (JSONEncoder(), JSONDecoder())
+  private let encoder = JSONEncoder(),
+              decoder = JSONDecoder()
   private let initialValue: T
 
   public init<S: StringProtocol>(wrappedValue: T, _ key: S) {

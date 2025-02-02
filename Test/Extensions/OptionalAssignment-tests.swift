@@ -1,7 +1,7 @@
 // Created by Leopold Lemmermann on 29.04.23.
 
 import XCTest
-@testable import LeosMisc
+@testable import Extensions
 
 final class OptionalAssignmentTests: XCTestCase {
   func test_whenAssigningOptionally_thenIsAssigned() throws {

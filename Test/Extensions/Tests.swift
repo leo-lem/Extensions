@@ -1,7 +1,7 @@
-@testable import LeosMisc
+@testable import Extensions
 import XCTest
 
-final class LeosMiscTests: XCTestCase {
+final class ExtensionsTests: XCTestCase {
   struct Dummy: Identifiable, Hashable {
     var id = UUID()
     var value = Int.random(in: 0..<10)

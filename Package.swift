@@ -2,25 +2,20 @@
 
 import PackageDescription
 
-let package = Package(
-  name: "LeosSwift",
-  platforms: [.iOS(.v16), .macOS(.v12)]
-)
+let package = Package(name: "Extensions", platforms: [.iOS(.v16), .macOS(.v12)])
+let libs: [Target] = [
+  .target(name: "Concurrency"),
+  .target(name: "Errors"),
+  .target(name: "Previews"),
+  .target(name: "Queries"),
+  .target(name: "Extensions", dependencies: ["Previews"]),
+]
 
 // MARK: - (DEPENDENCIES)
 
 package.dependencies = []
 
 // MARK: - (TARGETS)
-
-let concurrency = Target.target(name: "Concurrency")
-let errors = Target.target(name: "Errors")
-let previews = Target.target(name: "Previews")
-let queries = Target.target(name: "Queries")
-
-let misc = Target.target(name: "LeosMisc", dependencies: [.byName(name: previews.name)])
-
-let libs = [concurrency, errors, misc, previews, queries]
 
 package.targets = libs
   .flatMap {[

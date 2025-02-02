@@ -1,7 +1,7 @@
 // Created by Leopold Lemmermann on 29.04.23.
 
 import Foundation
-@testable import LeosMisc
+@testable import Extensions
 import struct UniformTypeIdentifiers.UTType
 import XCTest
 
