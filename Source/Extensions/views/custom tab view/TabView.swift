@@ -1,16 +1,42 @@
 // Created by Leopold Lemmermann on 31.03.23.
 
+#if os(iOS)
 import SwiftUI
 
-#if os(iOS)
+//public struct WhiteboardTabViewStyle: TabViewStyle {
+//  public static func _makeView<SelectionValue>(
+//    value: _GraphValue<_TabViewValue<WhiteboardTabViewStyle, SelectionValue>>,
+//    inputs: _ViewInputs
+//  ) -> _ViewOutputs where SelectionValue: Hashable {
+//    
+//  }
+//
+//  public static func _makeViewList<SelectionValue>(
+//    value: _GraphValue<_TabViewValue<WhiteboardTabViewStyle, SelectionValue>>,
+//    inputs: _ViewListInputs
+//  ) -> _ViewListOutputs where SelectionValue: Hashable {
+//
+//  }
+//
+//
+//}
 
 public struct TabView<Tab: Tabbable>: View {
   @Binding public var selection: Tab
+
+  @ViewBuilder var views: some View {
+    Text("")
+      .tag(0)
+
+    Text("")
+      .tag(1)
+  }
 
   public var body: some View {
     stack {
       GeometryReader { geo in
         ZStack {
+          Text("")
           ForEach(allTabs, id: \.self) {
             $0.tab
               .offset(
@@ -55,20 +81,23 @@ public struct TabView<Tab: Tabbable>: View {
   }
 }
 
-// MARK: - (PREVIEWS)
-
-struct TabView_Previews: PreviewProvider {
-  static var previews: some View {
+#Preview {
     Binding.Preview(Example3Tab.dashboard) { binding in
       TabView<Example3Tab>(selection: binding)
-        .environment(\.verticalSizeClass, .regular)
-        .previewDisplayName("Regular")
-
-      TabView<Example3Tab>(selection: binding)
-        .environment(\.verticalSizeClass, .compact)
-        .previewDisplayName("Side Tabbar")
     }
+}
+
+#Preview("Side Tabbar") {
+  Binding.Preview(Example3Tab.dashboard) { binding in
+    TabView<Example3Tab>(selection: binding)
+      .environment(\.verticalSizeClass, .compact)
   }
+}
+
+#Preview("4 Tabs") {
+    Binding.Preview(Example4Tab.dashboard) { binding in
+      TabView<Example4Tab>(selection: binding)
+    }
 }
 
 #endif

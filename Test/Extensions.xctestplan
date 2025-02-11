@@ -42,10 +42,25 @@
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "PreviewsTests",
+        "name" : "PreviewsTests"
+      }
+    },
+    {
       "target" : {
         "containerPath" : "container:",
         "identifier" : "ConcurrencyTests",
         "name" : "ConcurrencyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "ExtensionsTests",
+        "name" : "ExtensionsTests"
       }
     },
     {
@@ -54,22 +69,6 @@
         "containerPath" : "container:",
         "identifier" : "ErrorsTests",
         "name" : "ErrorsTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:",
-        "identifier" : "LeosMiscTests",
-        "name" : "LeosMiscTests"
-      }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:",
-        "identifier" : "PreviewsTests",
-        "name" : "PreviewsTests"
       }
     },
     {
