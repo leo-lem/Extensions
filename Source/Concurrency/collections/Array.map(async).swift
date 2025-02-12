@@ -5,7 +5,7 @@ public extension Array {
   /// - Parameter transform: The transformation to apply to the array's elements.
   /// - Returns: An array of the transformed values.
   @_disfavoredOverload
-  func map<T>(_ transform: @escaping (Element) async throws -> T) async rethrows -> [T] {
+  func map<T>(_ transform: @escaping (Element) async throws -> T) async throws -> [T] {
     try await map(transform).collect()
   }
   

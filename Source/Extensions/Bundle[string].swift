@@ -3,13 +3,13 @@ import Foundation
 public extension Bundle {
   subscript(string key: String) -> String {
     let value = object(forInfoDictionaryKey: key) as? String
-    assert(value != nil, "Missing Info.plist key \(key)")
+    runtimeWarning("Missing Info.plist key in Bundle.", condition: value == nil)
     return value ?? key
   }
 
   subscript(url key: String) -> URL {
     let url = URL(string: self[string: key])
-    assert(url != nil, "Invalid URL \(key)")
+    runtimeWarning("Invalid URL loaded from Bundle.", condition: url == nil)
     return url ?? URL(fileURLWithPath: "/dev/null")
   }
 }
