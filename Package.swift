@@ -2,7 +2,11 @@
 
 import PackageDescription
 
-let package = Package(name: "Extensions", platforms: [.iOS(.v16), .macOS(.v12)])
+let package = Package(
+  name: "Extensions",
+  platforms: [.iOS(.v16), .macOS(.v12)]
+)
+
 let libs: [Target] = [
   .target(name: "Concurrency"),
   .target(name: "Errors"),

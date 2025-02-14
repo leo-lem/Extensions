@@ -9,15 +9,7 @@ extension CancellableTask where Self == Task<Void, Never> {
   func cancel() { self.cancel() }
 }
 
-extension CancellableTask where Self == Task<Any, Never> {
-  func cancel() { self.cancel() }
-}
-
 extension CancellableTask where Self == Task<Void, Error> {
-  func cancel() { self.cancel() }
-}
-
-extension CancellableTask where Self == Task<Any, Error> {
   func cancel() { self.cancel() }
 }
 

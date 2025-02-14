@@ -5,7 +5,7 @@ public extension Array {
   /// - Parameter transform: The transformation to apply to the array's elements.
   /// - Returns: An array of the transformed values.
   @_disfavoredOverload
-  func filter(_ isIncluded: @escaping (Element) async throws -> Bool) async rethrows -> [Element] {
+  func filter(_ isIncluded: @escaping (Element) async throws -> Bool) async throws -> [Element] {
     try await filter(isIncluded).collect()
   }
   
