@@ -3,6 +3,7 @@
 @testable import Queries
 import XCTest
 
+// TODO: swift testing
 class KeyPathQueriesTests: XCTestCase {
   func testCreatingQuery() {
     var query = Query<Example>(\.id, "Hello")

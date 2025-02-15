@@ -3,6 +3,7 @@
 @testable import Queries
 import XCTest
 
+// TODO: swift testing
 class QueriesTests: XCTestCase {
   func testCreatingQuery() {
     var query = Query<Example>(true)

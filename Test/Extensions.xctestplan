@@ -42,41 +42,38 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "PreviewsTests",
-        "name" : "PreviewsTests"
+        "identifier" : "ConcurrencyTest",
+        "name" : "ConcurrencyTest"
       }
     },
     {
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "ConcurrencyTests",
-        "name" : "ConcurrencyTests"
+        "identifier" : "ExtensionsTest",
+        "name" : "ExtensionsTest"
       }
     },
     {
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "ExtensionsTests",
-        "name" : "ExtensionsTests"
+        "identifier" : "QueriesTest",
+        "name" : "QueriesTest"
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "ErrorsTests",
-        "name" : "ErrorsTests"
+        "identifier" : "PreviewsTest",
+        "name" : "PreviewsTest"
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "QueriesTests",
-        "name" : "QueriesTests"
+        "identifier" : "ErrorsTest",
+        "name" : "ErrorsTest"
       }
     }
   ],

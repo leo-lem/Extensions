@@ -1,6 +1,7 @@
 @testable import Errors
 import XCTest
 
+// TODO: swift testing
 @available(iOS 16, macOS 13, *)
 final class ErrorsTests: XCTestCase {
   func testPrintingError() async {

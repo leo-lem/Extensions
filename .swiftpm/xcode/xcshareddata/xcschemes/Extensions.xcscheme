@@ -15,23 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Concurrency"
-               BuildableName = "Concurrency"
-               BlueprintName = "Concurrency"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Queries"
-               BuildableName = "Queries"
-               BlueprintName = "Queries"
+               BlueprintIdentifier = "Extensions"
+               BuildableName = "Extensions"
+               BlueprintName = "Extensions"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,9 +43,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Errors"
-               BuildableName = "Errors"
-               BlueprintName = "Errors"
+               BlueprintIdentifier = "Queries"
+               BuildableName = "Queries"
+               BlueprintName = "Queries"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -71,9 +57,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Extensions"
-               BuildableName = "Extensions"
-               BlueprintName = "Extensions"
+               BlueprintIdentifier = "Concurrency"
+               BuildableName = "Concurrency"
+               BlueprintName = "Concurrency"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Errors"
+               BuildableName = "Errors"
+               BlueprintName = "Errors"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -83,22 +83,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:Test/Previews.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Queries.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Errors.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Concurrency.xctestplan">
-         </TestPlanReference>
-      </TestPlans>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -120,9 +106,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Concurrency"
-            BuildableName = "Concurrency"
-            BlueprintName = "Concurrency"
+            BlueprintIdentifier = "Extensions"
+            BuildableName = "Extensions"
+            BlueprintName = "Extensions"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

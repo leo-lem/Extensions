@@ -3,6 +3,7 @@
 import SwiftUI
 
 /// Label styling indicating an external link or action.
+@available(iOS 18.0, *)
 public struct ExternalLabelStyle: LabelStyle {
   public let color: Color,
              transfer: Bool
@@ -13,29 +14,36 @@ public struct ExternalLabelStyle: LabelStyle {
   }
 
   public func makeBody(configuration: Configuration) -> some View {
-    HStack(spacing: 10) {
+    HStack {
       configuration.icon
-        .frame(width: 20, height: 20)
-        .foregroundStyle(.white)
-        .background {
-          RoundedRectangle(cornerRadius: 5)
-            .frame(width: 30, height: 30)
-            .foregroundStyle(color)
-        }
-        .padding(.vertical, 5)
+        .foregroundStyle(iconColor)
+        .frame(width: 35, height: 35)
+        .background(color, in: .rect(cornerRadius: 5))
       configuration.title
       Spacer()
       Image(systemName: transfer ? "arrow.up.right" : "chevron.right")
     }
   }
+
+  /// Icon color is white for darker colors and black for lighter color background.
+  var iconColor: Color {
+    let background = color.resolve(in: .init())
+    return if background.blue < 0.8 || background.red < 0.8 || background.green < 0.8 {
+      .white
+    } else {
+      .black
+    }
+  }
 }
 
+@available(iOS 18.0, *)
 public extension LabelStyle where Self == ExternalLabelStyle {
   static func external(color: Color, transfer: Bool) -> Self {
     .init(color: color, transfer: transfer)
   }
 }
 
+@available(iOS 18.0, *)
 #Preview {
   List {
     Button("Preview", systemImage: "document.fill") {}
@@ -43,7 +51,7 @@ public extension LabelStyle where Self == ExternalLabelStyle {
   }
 
   Button("Preview", systemImage: "lock") {}
-    .labelStyle(ExternalLabelStyle(color: .green, transfer: true))
+    .labelStyle(ExternalLabelStyle(color: .white, transfer: true))
     .buttonStyle(.borderedProminent)
     .padding()
 }

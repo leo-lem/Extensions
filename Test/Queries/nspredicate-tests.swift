@@ -3,6 +3,7 @@
 @testable import Queries
 import XCTest
 
+// TODO: swift testing
 class NSPredicateTests: XCTestCase {
   func testEvaluation() {
     let example = ExampleObject()

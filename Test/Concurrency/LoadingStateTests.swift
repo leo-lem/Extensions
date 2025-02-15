@@ -3,6 +3,7 @@
 @testable import Concurrency
 import XCTest
 
+// TODO: swift testing
 final class LoadingStateTests: XCTestCase {
   func testAddingElementStartsLoading() {
     var state = LoadingState<String>.idle
