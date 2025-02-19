@@ -1,14 +1,10 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let lint = Target.PluginUsage.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
 let libs: [Target] = [
-  .target(name: "Concurrency"),
-  .target(name: "Errors"),
-  .target(name: "Previews"),
-  .target(name: "Queries"),
-  .target(name: "Extensions", dependencies: ["Previews"]),
+  .target(name: "Extensions", path: "Source")
 ]
 
 let package = Package(
@@ -16,9 +12,11 @@ let package = Package(
   platforms: [.iOS(.v16), .macOS(.v12)],
   products: libs.map { .library(name: $0.name, targets: [$0.name]) },
   dependencies: [
-    .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.1.0"),
+    .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.1.0")
   ],
-  targets: libs + libs.map {
-    .testTarget(name: "\($0.name)Test", dependencies: [.byName(name: $0.name)], path: "Test/\($0.name)", plugins: [lint])
-  }
+  targets: libs + [
+    .testTarget(
+      name: "ExtensionsTest", dependencies: libs.map { .byName(name: $0.name) }, path: "Test", plugins: [lint]
+    )
+  ]
 )

@@ -9,71 +9,14 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : {
-      "targets" : [
-        {
-          "containerPath" : "container:",
-          "identifier" : "Concurrency",
-          "name" : "Concurrency"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "Errors",
-          "name" : "Errors"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "LeosMisc",
-          "name" : "LeosMisc"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "Previews",
-          "name" : "Previews"
-        },
-        {
-          "containerPath" : "container:",
-          "identifier" : "Queries",
-          "name" : "Queries"
-        }
-      ]
-    },
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "ConcurrencyTest",
-        "name" : "ConcurrencyTest"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:",
         "identifier" : "ExtensionsTest",
         "name" : "ExtensionsTest"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:",
-        "identifier" : "QueriesTest",
-        "name" : "QueriesTest"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:",
-        "identifier" : "PreviewsTest",
-        "name" : "PreviewsTest"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:",
-        "identifier" : "ErrorsTest",
-        "name" : "ErrorsTest"
       }
     }
   ],
