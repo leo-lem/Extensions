@@ -15,9 +15,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SwiftDatabase"
+               BuildableName = "SwiftDatabase"
+               BlueprintName = "SwiftDatabase"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Extensions"
                BuildableName = "Extensions"
                BlueprintName = "Extensions"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SwiftUIExtensions"
+               BuildableName = "SwiftUIExtensions"
+               BlueprintName = "SwiftUIExtensions"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -55,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Extensions"
-            BuildableName = "Extensions"
-            BlueprintName = "Extensions"
+            BlueprintIdentifier = "SwiftDatabase"
+            BuildableName = "SwiftDatabase"
+            BlueprintName = "SwiftDatabase"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
