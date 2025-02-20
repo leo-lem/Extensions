@@ -12,7 +12,7 @@ public struct SwiftDatabase: Sendable {
 @available(iOS 17, *)
 extension SwiftDatabase: DependencyKey {
   /// Configure the container using this static property.
-  @MainActor static var container: ModelContainer!
+  @MainActor public static var container: ModelContainer!
   @MainActor static let context = { ModelContext(container) }()
   
   public static let liveValue = SwiftDatabase(
