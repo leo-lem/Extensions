@@ -15,7 +15,7 @@ extension DependencyValues {
   }
 }
 
-@Suite(.serialized) @MainActor struct DatabaseTests {
+@Suite(.serialized) struct DatabaseTests {
   let context: ModelContext
   let model = TestModel()
 

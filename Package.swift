@@ -13,7 +13,7 @@ let libs: [Target] = [
 
 let package = Package(
   name: "Extensions",
-  platforms: [.iOS(.v16), .macOS(.v12)],
+  platforms: [.iOS(.v17), .macOS(.v13)],
   products: libs.map { .library(name: $0.name, targets: [$0.name]) },
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-dependencies.git", from: "1.0.0"),
