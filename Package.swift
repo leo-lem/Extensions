@@ -7,8 +7,7 @@ let deps = Target.Dependency.product(name: "Dependencies", package: "swift-depen
 let lint = Target.PluginUsage.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
 let libs: [Target] = [
   .target(name: "Extensions"),
-  .target(name: "SwiftUIExtensions", dependencies: ["Extensions"]),
-  .target(name: "SwiftDatabase", dependencies: ["ExtensionsMacros", deps])
+  .target(name: "SwiftUIExtensions", dependencies: ["Extensions"])
 ]
 
 let package = Package(
@@ -16,7 +15,7 @@ let package = Package(
   platforms: [.iOS(.v17), .macOS(.v13)],
   products: libs.map { .library(name: $0.name, targets: [$0.name]) },
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-dependencies.git", from: "1.0.0"),
+//    .package(url: "https://github.com/pointfreeco/swift-dependencies.git", from: "1.0.0"),
     .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.1.0"),
     .package(url: "https://github.com/swiftlang/swift-syntax.git", from: "600.0.0")
   ],
