@@ -15,51 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Concurrency"
-               BuildableName = "Concurrency"
-               BlueprintName = "Concurrency"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Queries"
-               BuildableName = "Queries"
-               BlueprintName = "Queries"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Previews"
-               BuildableName = "Previews"
-               BlueprintName = "Previews"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Errors"
-               BuildableName = "Errors"
-               BlueprintName = "Errors"
+               BlueprintIdentifier = "SwiftDatabase"
+               BuildableName = "SwiftDatabase"
+               BlueprintName = "SwiftDatabase"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -77,6 +35,20 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SwiftUIExtensions"
+               BuildableName = "SwiftUIExtensions"
+               BlueprintName = "SwiftUIExtensions"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -86,17 +58,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Test/Previews.xctestplan"
+            reference = "container:Test/Extensions.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Queries.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Errors.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:Test/Concurrency.xctestplan">
          </TestPlanReference>
       </TestPlans>
    </TestAction>
@@ -120,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Concurrency"
-            BuildableName = "Concurrency"
-            BlueprintName = "Concurrency"
+            BlueprintIdentifier = "SwiftDatabase"
+            BuildableName = "SwiftDatabase"
+            BlueprintName = "SwiftDatabase"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

@@ -8,8 +8,8 @@ import class SwiftUI.FileWrapper
 import struct UniformTypeIdentifiers.UTType
 
 public struct DataFile: FileDocument, Equatable {
-  public static var readableContentTypes = [UTType.json]
-  public static var writableContentTypes = [UTType.json]
+  public static let readableContentTypes = [UTType.json]
+  public static let writableContentTypes = [UTType.json]
   
   public let content: Data
   

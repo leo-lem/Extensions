@@ -3,7 +3,7 @@
 infix operator ???: NilCoalescingPrecedence
 public extension StringProtocol {
   /// Works like nil coalescing for empty strings.
-  static func ???<S: StringProtocol>(string: Self, replaceWith: S) -> Self {
+  static func ??? <S: StringProtocol>(string: Self, replaceWith: S) -> Self {
     string.replaceIfEmpty(with: replaceWith)
   }
 
