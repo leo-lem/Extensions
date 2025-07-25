@@ -3,7 +3,6 @@
 import SwiftUI
 
 /// Label styling indicating an external link or action.
-@available(iOS 18.0, *)
 public struct ExternalLabelStyle: LabelStyle {
   public let color: Color,
              transfer: Bool
@@ -36,14 +35,12 @@ public struct ExternalLabelStyle: LabelStyle {
   }
 }
 
-@available(iOS 18.0, *)
 public extension LabelStyle where Self == ExternalLabelStyle {
   static func external(color: Color, transfer: Bool) -> Self {
     .init(color: color, transfer: transfer)
   }
 }
 
-@available(iOS 18.0, *)
 #Preview {
   List {
     Button("Preview", systemImage: "document.fill") {}
