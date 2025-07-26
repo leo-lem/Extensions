@@ -8,6 +8,7 @@ public struct AsyncButton<Label: View, Indicator: View>: View {
     case replace, edge(Edge), none
   }
 
+  let role: ButtonRole?
   let indicatorStyle: IndicatorStyle
   let taskPriority: TaskPriority?
   let action: () async -> Void
@@ -15,7 +16,7 @@ public struct AsyncButton<Label: View, Indicator: View>: View {
   let indicator: () -> Indicator
 
   public var body: some View {
-    Button { Task(priority: taskPriority, operation: asyncAction) } label: {
+    Button(role: role) { Task(priority: taskPriority, operation: asyncAction) } label: {
       if case let .edge(edge) = indicatorStyle {
         VStack {
           if isExecuting, edge == .top {
@@ -55,12 +56,14 @@ public struct AsyncButton<Label: View, Indicator: View>: View {
   @State private var isExecuting = false
 
   public init(
+    role: ButtonRole? = nil,
     indicatorStyle: IndicatorStyle = .none,
     taskPriority: TaskPriority? = nil,
     action: @escaping () async -> Void,
     @ViewBuilder label: @escaping () -> Label,
     @ViewBuilder indicator: @escaping () -> Indicator = ProgressView.init
   ) {
+    self.role = role
     self.indicatorStyle = indicatorStyle
     self.taskPriority = taskPriority
     self.action = action
