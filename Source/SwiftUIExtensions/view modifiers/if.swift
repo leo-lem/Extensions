@@ -79,8 +79,8 @@ public extension View {
   ///     } else: { view in
   ///         view.foregroundColor(.red)
   ///     }
-  /// //adds a navigationtitle displaying the unwrapped String if it is not nil
-  /// //otherwise changes the foregroundColor of the Text to red
+  /// // adds a navigationtitle displaying the unwrapped String if it is not nil
+  /// // otherwise changes the foregroundColor of the Text to red
   /// ```
   /// - Parameters:
   ///   - optional: An optional parameter of arbitrary type.
@@ -98,7 +98,6 @@ public extension View {
     switch (optional, condition) {
     case (.none, _), (.some, false): transform2(self)
     case (.some, .none), (.some, true): transform(self, optional!)
-    default: self
     }
   }
 }
