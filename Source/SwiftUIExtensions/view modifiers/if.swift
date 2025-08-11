@@ -98,6 +98,7 @@ public extension View {
     switch (optional, condition) {
     case (.none, _), (.some, false): transform2(self)
     case (.some, .none), (.some, true): transform(self, optional!)
+    @unknown default: self
     }
   }
 }
